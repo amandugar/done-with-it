@@ -11,6 +11,7 @@ import {
 } from "../components/forms"
 import FormImagePicker from "../components/forms/FormImagePicker"
 import Screen from "../components/Screen"
+import useLocation from "../hooks/useLocation"
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
