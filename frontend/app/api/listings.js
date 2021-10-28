@@ -18,7 +18,7 @@ export const addListing = (listing, onUploadProgress) => {
       uri: image,
     })
   )
-  console.log(listing.location.latitude)
+
   if (listing.location)
     data.append("location", JSON.stringify(listing.location))
 
