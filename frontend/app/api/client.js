@@ -1,8 +1,15 @@
 import { create } from "apisauce"
 import cache from "../utility/cache"
+import authStorage from "../auth/storage"
 
 const apiClient = create({
-  baseURL: "http://42b8-122-161-87-27.ngrok.io/api",
+  baseURL: "http://a534-122-161-87-27.ngrok.io/api",
+})
+
+apiClient.addAsyncRequestTransform(async request => {
+  const authToken = await authStorage.getToken()
+  if (!authToken) return
+  request.headers["x-auth-token"] = authToken
 })
 
 const get = apiClient.get

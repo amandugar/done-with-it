@@ -1,9 +1,7 @@
 import React, { useState } from "react"
 import { FlatList, StyleSheet, View } from "react-native"
 import ListItem from "../components/lists/ListItem"
-import Constants from "expo-constants"
 import Screen from "../components/Screen"
-import colors from "../config/colors"
 import ListItemDeleteAction from "../components/lists/ListItemDeleteAction"
 
 const initialMessages = [
